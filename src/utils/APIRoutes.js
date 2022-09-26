@@ -1,5 +1,5 @@
-// export const host = "https://socket-chat-app.up.railway.app";
-export const host = "http://localhost:8000";
+export const host = "https://socket-chat-app.up.railway.app";
+// export const host = "http://localhost:8000";
 export const RegisterRoute = host + "/api/auth/register";
 export const LoginRoute = host + "/api/auth/login";
 export const avatarApiRoutePrefix = "https://api.multiavatar.com/";
