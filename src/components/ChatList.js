@@ -9,7 +9,7 @@ const ChatList = ({ currentChat, setCurrentChat, allUsers, currentUser }) => {
   };
 
   return (
-    <ul className="overflow-auto h-[32rem]">
+    <ul className={`overflow-auto h-[32rem] `}>
       <div className="my-2 mb-2 ml-2 text-lg text-gray-600 flex justify-between">
         <h2 className="">Chats</h2>
       </div>

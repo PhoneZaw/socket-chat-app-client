@@ -128,7 +128,11 @@ const Chat = () => {
   return (
     <div className="w-full mx-auto h-screen overflow-hidden">
       <div className="min-w-full border rounded md:grid md:grid-cols-3">
-        <div className="border-r border-gray-300 lg:col-span-1 max-h-screen">
+        <div
+          className={`border-r border-gray-300 lg:col-span-1 max-h-screen ${
+            currentChat && "hidden md:block"
+          }`}
+        >
           {/* User Profile */}
           <div
             className="relative flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300  focus:outline-none
@@ -161,9 +165,12 @@ const Chat = () => {
           />
         </div>
         {currentChat && (
-          <div className="md:col-span-2 md:block max-h-screen">
+          <div className="md:col-span-2 max-h-screen">
             <div className="w-full max-h-screen flex flex-col">
-              <ChatHeader currentChat={currentChat} />
+              <ChatHeader
+                currentChat={currentChat}
+                setCurrentChat={setCurrentChat}
+              />
               <ChatContainer messages={messages} />
               <InputText sendMessage={(msg) => sendMessage(msg)} />
             </div>
